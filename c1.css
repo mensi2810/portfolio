@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9ecf, #ffc3e6, #fbc2eb);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+  }
+  
+  /* Background Animation */
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+  
+  .hero {
+    text-align: center;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    width: 420px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  /* Floating Effect */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(90deg, #ff4f81, #7a00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  h3 {
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  
+  .primary {
+    background: linear-gradient(90deg, #ff4f81, #ff758c);
+    color: white;
+  }
+  
+  .secondary {
+    border: 2px solid #ff4f81;
+    color: #ff4f81;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  

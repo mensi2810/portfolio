@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensi Lapani | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background: linear-gradient(-45deg, #6a11cb, #8e2de2, #4facfe, #ff4ecd);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: white;
+}
+
+/* Smooth Animated Gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAVBAR */
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 10%;
+  position:fixed;
+  width:100%;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+}
+
+nav h2{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ffb3ff;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding-top:80px;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(20px);
+  padding:60px;
+  border-radius:30px;
+  width:420px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0px);}
+}
+
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,0.6);
+  box-shadow:0 0 30px rgba(255,255,255,0.4);
+  margin-bottom:20px;
+}
+
+/* Gradient Name Text */
+
+.card h1{
+  font-size:32px;
+  background: linear-gradient(90deg, #ffffff, #ffb3ff, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card h3{
+  margin:10px 0;
+  font-weight:400;
+  opacity:0.9;
+}
+
+.card p{
+  font-size:14px;
+  margin:20px 0;
+  opacity:0.85;
+}
+
+/* BUTTONS */
+
+.btn{
+  display:inline-block;
+  margin:10px 8px;
+  padding:10px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.4s;
+}
+
+.primary{
+  background:linear-gradient(90deg,#ff4ecd,#8e2de2);
+  color:white;
+  box-shadow:0 0 20px rgba(255,0,255,0.4);
+}
+
+.secondary{
+  border:2px solid rgba(255,255,255,0.6);
+  color:white;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 30px rgba(255,255,255,0.6);
+}
+
+/* SECTIONS */
+
+section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section-title{
+  font-size:28px;
+  margin-bottom:40px;
+  background: linear-gradient(90deg,#ffffff,#ffb3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SKILLS */
+
+.skills-container{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.skill{
+  background:rgba(255,255,255,0.1);
+  padding:20px 30px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+}
+
+.skill:hover{
+  transform:translateY(-10px);
+  background:rgba(255,255,255,0.2);
+}
+
+/* PROJECTS */
+
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  justify-content:center;
+}
+
+.project-card{
+  width:280px;
+  background:rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:20px;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+}
+
+.project-card:hover{
+  transform:scale(1.05);
+  background:rgba(255,255,255,0.2);
+}
+
+/* CONTACT */
+
+input,textarea{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  width:100%;
+  margin-bottom:15px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(255,255,255,0.1);
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>Mensi</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="card">
+    <img src="profile.jpg" class="profile-img">
+    <h1>Mensi Lapani</h1>
+    <h3>Web Designer</h3>
+    <p>Transforming complex ideas into elegant and user-friendly designs.</p>
+    <a href="#contact" class="btn primary">Hire Me</a>
+    <a href="#projects" class="btn secondary">My Work</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p>I create modern, responsive and user-focused websites with clean UI and smooth experience.</p>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills-container">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Figma</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Modern responsive portfolio design.</p>
+    </div>
+    <div class="project-card">
+      <h3>Business Landing Page</h3>
+      <p>High-converting SaaS landing page.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button class="btn primary">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Mensi Lapani | All Rights Reserved
+</footer>
+
+</body>
+</html>
