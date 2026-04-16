@@ -13,28 +13,47 @@ h1 {
 .header {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    font-size: 100%;
-    /* position: fixed; */
-    /* top: 0; */
     background-color: #fce6f8;
-    height: 10%;
+    height: 80px;
     position: fixed;
-    width: 100%;
-    text-align: center;
-    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     backdrop-filter: blur(10px);
-    margin: 0px 0px 0px 0px;
+    padding: 0 5%;
+    box-sizing: border-box;
 }
 
-a{
+.header span h1 {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #5f3054;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+a {
     text-decoration: none;
     color: rgb(56, 56, 56);
-    margin: 20px;
+    margin: 0 15px;
     position: relative;
     font-weight: 300;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #f8a3e8;
 }
 
 #btn {
@@ -648,16 +667,175 @@ a{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
- }
+}
  #insta{
     background: linear-gradient(135deg, #f0b5e2, #E1306C, #833AB4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
- }
+}
  #teleg{
     background: linear-gradient(135deg, #6EC1E4, #2AABEE);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
- }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .home-text, .skill, .box, .con-detail {
+        width: 80%;
+    }
+    .detail {
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fce6f8;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 1.2rem;
+        display: block;
+        text-align: center;
+    }
+
+    #btn {
+        margin: 10px auto;
+        display: block;
+    }
+
+    .home-text, .skill, .box, .con-detail {
+        width: 90%;
+        padding-bottom: 5%;
+        height: auto;
+    }
+
+    #home {
+        padding: 100px 5% 50px;
+    }
+
+    .home-text > h1 {
+        font-size: 200%;
+    }
+
+    .detail {
+        margin: 0 5%;
+    }
+
+    .detail > h2, .education > h1, .box > h1, .skill > h1, .contact > h1 {
+        font-size: 200%;
+    }
+
+    .certi {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .edu {
+        width: 100%;
+    }
+
+    .system {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 95%;
+        margin: 0 auto 20px;
+    }
+
+    .head {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .head > h3 {
+        margin-left: 3%;
+        padding-top: 0;
+    }
+
+    .box1, .box2 {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .tools {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .con-link {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .plist {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .name {
+        margin-left: 0;
+    }
+
+    .contact > p {
+        margin: 0 10%;
+        font-size: 110%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-text > h1 {
+        font-size: 180%;
+    }
+    
+    .home-text > p, .detail > p, .project > p {
+        font-size: 100%;
+        padding: 0 15px;
+    }
+
+    .con-detail {
+        width: 95%;
+    }
+
+    .btn1, .btn2 {
+        padding: 10px 20px;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .btn2 {
+        margin-left: auto;
+    }
+}
